@@ -1,1 +1,143 @@
 /* css styles */
+body {
+    background-color: #c09389;
+}
+
+#hero h1 {
+    color: #fff;
+}
+
+
+.btn-hero-scroll {
+    background-color: #fff;
+    border-color: #fff;
+    color: #a26f67; 
+}
+
+.btn-hero-scroll:hover,
+.btn-hero-scroll:focus {
+    background-color: #efd9d1; 
+    border-color: #efd9d1;
+    color: #a26f67; 
+}
+
+.btn-hero-scroll:active {
+    background-color: #a26f67 !important;
+    border-color: #a26f67 !important;
+    color: white !important;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; 
+  border: none;
+  padding: 0;
+}
+
+
+.vertical-spacer {
+    height: 100px; 
+    width: 100%; 
+}
+
+.float-image {
+  float: left;
+  max-width: 30%;
+  margin-right: 60px;
+  height: auto;
+}
+
+.custom-heading {
+    font-size: 56px !important;  
+    font-weight: bold !important; 
+    text-align: center !important;
+    color: white !important;
+}
+
+.welcome-text {
+  font-size: 48px !important;
+  font-weight: bold !important;
+  color: white !important;
+}
+
+
+.intro-text {
+  font-size: 18px; 
+  color: white;
+}
+
+.btn-extra-small {
+    padding: 0.1rem 0.5rem; 
+    font-size: 0.75rem; 
+    line-height: 1.5; 
+}
+
+.btn-extra-small i {
+    font-size: 0.75rem;
+}
+
+.card {
+  background-color: white; 
+  border-color: white; 
+  border-radius: 15px;
+}
+
+.card a {
+  text-decoration: none; 
+  color: #a26f67;       
+}
+
+.card.hover-effect {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card.hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.card-text-metadata {
+  margin-top: 10px;
+}
+
+.badge-custom-color {
+    background-color: #a26f67 !important; 
+    color: white !important; 
+    border: 1px solid #a26f67; 
+}
+
+
+.project-title-text {
+  font-size: 28px !important; 
+  color: #a26f67 !important;
+  font-weight: bold !important;
+}
+
+.navbar {
+    background-color: #a26f67 !important; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link {
+    color: #efd9d1 !important;
+}
+
+.navbar .nav-link:hover {
+    color: #ffffff !important; 
+}
+
+.navbar .nav-link.active {
+    color: #ffffff !important; 
+    font-weight: bold;
+}

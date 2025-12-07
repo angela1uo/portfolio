@@ -2,15 +2,29 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "Projects",
-    "section": "",
-    "text": "About this site\n\n1 + 3\n\n[1] 4\n\n\n\n1+10\n\n[1] 11"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
     "title": "Angela Luo",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Welcome to my portfolio! My name is Angela and I am a current third year at the University of California, Los Angeles majoring in Statistics and Data Science with a minor in Data Science Engineering.\nDOWNLOAD CV"
+  },
+  {
+    "objectID": "about.html#hello",
+    "href": "about.html#hello",
+    "title": "Angela Luo",
+    "section": "",
+    "text": "Welcome to my portfolio! My name is Angela and I am a current third year at the University of California, Los Angeles majoring in Statistics and Data Science with a minor in Data Science Engineering.\nDOWNLOAD CV"
+  },
+  {
+    "objectID": "projects/01-project.html",
+    "href": "projects/01-project.html",
+    "title": "Tr(AI)vel",
+    "section": "",
+    "text": "Projects"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "\nHello, I’m Angela.\n",
+    "section": "",
+    "text": "Hello, I’m Angela.\n\n\nI’m a data scientist.\n\n\nView my work \n\n\n\n\n\n\n\n\n\n\nWelcome to my portfolio.\n\n\nMy name is Angela and I am a current third year at the University of California, Los Angeles majoring in Statistics and Data Science with a minor in Data Science Engineering. My passion for mathematics, marketing, and engineering has driven me to seek a career in the field of data science.\n\n\nFeel free to reach out at angela1uo@g.ucla.edu — I’d love to chat!\n\n\n\n  LinkedIn \n  GitHub \n  Download Resume \n\n\n\n\n\n\n\n\n\n\n\nProjects\n\n\n\n\n\n\n\nTr(AI)vel: Personal Travel Planning Assistant\n\n\nA machine learning chatbot built with PyTorch to provide the cheapest hotel and flight prices available to customers.\n\n\nPython NLP Streamlit"
   }
 ]

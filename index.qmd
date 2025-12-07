@@ -1,11 +1,182 @@
 ---
-title: "Angela Luo"
+format:
+  html:
+    css: styles.css
+    page-layout: full
 ---
 
-This is a Quarto website.
+<section id="hero" class="hero-section text-center">
+  <h1 class="display-3 fw-bold" data-anchor-skip>Hello, I'm Angela.</h1>
+ 
+  <p class="display-5" style="margin-top: -0.5rem; color: #ffffff;">I'm a data scientist.</p>
+ 
+  <button type="button" class="btn btn-primary btn-lg mt-5 rounded-pill btn-hero-scroll" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">
+    View my work <i class="bi bi-arrow-down"></i>
+  </button>
+</section>
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
-```{r}
-1 + 1
-```
+<section id="about" class="mt-5">
+<div class="container py-5">
+  <div class="vertical-spacer"></div>
+  
+  <img src="headshot.jpeg" class="float-image" alt="Descriptive Alt Text"> 
+
+  <div class="about-text-content">
+  <p class="welcome-text">Welcome to my portfolio.</p>
+  
+  <p class="intro-text">
+  My name is Angela and I am a current third year at the University of California, Los Angeles majoring in Statistics and Data Science with a minor in Data Science Engineering. My passion for mathematics, marketing, and engineering has driven me to seek a career in the field of data science.
+  </p>
+  
+  <p class="intro-text"> Feel free to reach out at angela1uo@g.ucla.edu — I'd love to chat!
+  </p>
+  </div>
+  
+  <div class="mt-4 d-flex justify-content-start">
+  
+  <button id="linkedinBtn" class="btn btn-primary btn-sm m-2 rounded-pill btn-extra-small btn-hero-scroll">
+    <i class="fab fa-linkedin"></i> LinkedIn
+  </button>
+  
+  <button id="githubBtn" class="btn btn-primary btn-sm m-2 rounded-pill btn-extra-small btn-hero-scroll">
+    <i class="fab fa-github"></i> GitHub
+  </button>
+  
+  <button id="downloadResumeBtn" class="btn btn-primary btn-sm m-2 rounded-pill btn-extra-small btn-hero-scroll">
+    <i class="fas fa-file-download"></i> Download Resume
+  </button>
+  
+  </div>
+  
+  <script>
+  document.getElementById('linkedinBtn').addEventListener('click', function() {
+    window.open('https://www.linkedin.com/in/angela1uo/', '_blank');
+  });
+  
+  document.getElementById('githubBtn').addEventListener('click', function() {
+    window.open('https://github.com/angela1uo', '_blank');
+  });
+  
+  document.getElementById('downloadResumeBtn').addEventListener('click', function() {
+    var link = document.createElement('a');
+    link.href = 'Angela_Luo_Resume.pdf';
+    link.download = 'Angela_Luo_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+    
+  </script>
+  
+  
+  <div style="clear: both;"></div>
+  
+</div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.querySelector('.navbar');
+    // Ensure you target the correct links that are used for navigation (e.g., .nav-link)
+    const navLinks = document.querySelectorAll('.nav-link'); 
+    // Select all sections that have an ID and are used as scroll targets
+    const sections = document.querySelectorAll('section[id]');
+    const heroHeight = window.innerHeight;
+
+  function toggleNavbarVisibility() {
+        if (navbar) {
+            if (window.scrollY >= heroHeight) {
+                // Show navbar and fix position when past hero section
+                navbar.style.display = 'flex';
+                if (!navbar.classList.contains('fixed-top')) {
+                    navbar.classList.add('fixed-top');
+                }
+            } else {
+                // Hide navbar on hero section
+                navbar.style.display = 'none';
+                navbar.classList.remove('fixed-top');
+            }
+        }
+    }
+
+  function updateActiveNavLink() {
+        let current = '';
+        const scrollPosition = window.scrollY;
+
+  sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            // Use a buffer (e.g., 200px) so the link activates slightly before the section hits the top
+            if (scrollPosition >= sectionTop - 200 && scrollPosition < sectionTop + sectionHeight - 200) {
+                current = section.getAttribute('id');
+            }
+        });
+
+  navLinks.forEach(link => {
+            link.classList.remove('active');
+            
+  if (link.getAttribute('href') && link.getAttribute('href').endsWith('#' + current)) {
+                link.classList.add('active'); 
+            }
+        });
+    }
+
+  toggleNavbarVisibility();
+  updateActiveNavLink();
+
+  window.addEventListener('scroll', function() {
+        toggleNavbarVisibility();
+        updateActiveNavLink();
+    });
+
+  document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('index.qmd#')) {
+                e.preventDefault();
+                const targetId = href.split('#')[1];
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+                
+  navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active'); 
+            }
+        });
+    });
+});
+</script>
+
+
+
+<section id="projects" class="mt-5">
+<div class="container py-5">
+ 
+<p class="custom-heading">Projects</p>
+ 
+::: {.grid .gap-4}
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .scroll-reveal}
+::: {.card .hover-effect}
+<a href="https://github.com/derekshi1/NSDC_winter25" target="_blank">
+<div class="card-body">
+<h3 class="project-title-text">Tr(AI)vel: Personal Travel Planning Assistant</h3>
+<p class="card-text">
+A machine learning chatbot built with PyTorch to provide the cheapest hotel and flight prices available to customers.
+</p>
+<p class="card-text-metadata">
+<span class="badge badge-custom-color">Python</span>
+<span class="badge badge-custom-color">NLP</span>
+<span class="badge badge-custom-color">Streamlit</span>
+</p>
+</div>
+</a>
+:::
+:::
+
+:::
+
+
+
+</div>
+</section>
+
